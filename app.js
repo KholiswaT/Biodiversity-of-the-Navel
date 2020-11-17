@@ -1,7 +1,7 @@
 
 function plots(){
   
-  var navel = d3.json("/samples.json").then(function(navel){
+  var navel = d3.json("Biodiversity-of-the-Navel/samples.json").then(function(navel){
     console.log(navel);  
 
 
@@ -86,7 +86,7 @@ Plotly.newPlot("bubble", bubbleData, bubbleLayout),{responsive: true};
 
 function info() {
 
-  d3.json("/samples.json").then(function(navelinfo){
+  d3.json("Biodiversity-of-the-Navel/samples.json").then(function(navelinfo){
     var naveldata = navelinfo.metadata;
     console.log(navelinfo);
     console.log(naveldata);
@@ -130,7 +130,7 @@ d3.selectAll("#selDataset").on("change", optionChanged);
 
 function optionChanged(){
 
-  var navel = d3.json("/samples.json").then(function(navel){
+  var navel = d3.json("Biodiversity-of-the-Navel/samples.json").then(function(navel){
     console.log(navel); 
 
   var navelmeta = navel.metadata;
